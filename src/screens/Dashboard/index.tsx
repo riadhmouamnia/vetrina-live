@@ -1,7 +1,6 @@
-import {StyleSheet, View} from 'react-native';
+import {View} from 'react-native';
 import React from 'react';
 import {ScrollView} from 'react-native-gesture-handler';
-import {globalStyles} from 'styles/global';
 import Cover from 'screens/Dashboard/components/Cover';
 import ConfigCard from 'screens/Dashboard/components/ConfigCard';
 import VisitorsCard from 'screens/Dashboard/components/VisitorsCard';
@@ -21,7 +20,6 @@ const Dashboard = ({navigation}: any) => {
       <ScrollView>
         <View style={DashboardStyles.wrapper}>
           <Cover />
-          {/* <View style={globalStyles.container}> */}
           <View style={DashboardStyles.cardContainer}>
             <ConfigCard />
             <VisitorsCard />
@@ -32,12 +30,9 @@ const Dashboard = ({navigation}: any) => {
             <CustomerSupportCard />
             <InviteFriendCard />
           </View>
-          {/* </View> */}
         </View>
       </ScrollView>
     </View>
   );
 };
-
 export default Dashboard;
-const styles = StyleSheet.create({});
