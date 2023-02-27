@@ -7,40 +7,13 @@
 
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 import {createDrawerNavigator} from '@react-navigation/drawer';
+import SectionOne from 'components/SectionOne';
+import SectionTwo from 'components/SectionTwo';
 
 const Drawer = createDrawerNavigator();
-
-function SectionOne() {
-  return (
-    <View style={styles.sectionContainer}>
-      <Text>Section One</Text>
-      <Text>Section One</Text>
-      <Text>Section One</Text>
-      <Text>Section One</Text>
-      <Text>Section One</Text>
-      <Text>Section One</Text>
-      <Text>Section One</Text>
-    </View>
-  );
-}
-function SectionTwo() {
-  return (
-    <View style={styles.sectionContainer}>
-      <Text>Section Two</Text>
-    </View>
-  );
-}
 
 function App() {
   return (
