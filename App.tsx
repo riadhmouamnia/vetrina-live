@@ -1,29 +1,9 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
 import {StyleSheet} from 'react-native';
-
-import {createDrawerNavigator} from '@react-navigation/drawer';
-import SectionOne from 'components/SectionOne';
-import SectionTwo from 'components/SectionTwo';
-
-const Drawer = createDrawerNavigator();
+import RootDrawerNavigator from 'routes/RootDrawerNavigator';
 
 function App() {
-  return (
-    <NavigationContainer>
-      <Drawer.Navigator>
-        <Drawer.Screen name="Feed" component={SectionOne} />
-        <Drawer.Screen name="Article" component={SectionTwo} />
-      </Drawer.Navigator>
-    </NavigationContainer>
-  );
+  return <RootDrawerNavigator />;
 }
 
 const styles = StyleSheet.create({
