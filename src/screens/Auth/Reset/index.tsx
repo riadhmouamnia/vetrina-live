@@ -4,29 +4,24 @@ import {
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
-import {globalStyles} from 'styles/global';
 import React from 'react';
 import Header from 'screens/Auth/shared/Header';
 import ResetForm from 'screens/Auth/Reset/ResetForm';
 import ActionLinks from 'screens/Auth/Reset/ActionLinks';
+import {authWrapper} from 'screens/Auth/styles/AuthStyles';
 
-export default function Reset() {
-  const onReset = () => {
-    console.log('Reseted');
-  };
+export default function Reset({navigation}: any) {
   return (
-    <ScrollView>
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View style={globalStyles.container}>
-          <Header
-            title="Forgot Password"
-            subTitle="Enter your email and you will receive an email 
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <View style={authWrapper.container}>
+        <Header
+          title="Forgot Password"
+          subTitle="Enter your email and you will receive an email 
             to recover your password"
-          />
-          <ResetForm />
-          <ActionLinks onReset={onReset} />
-        </View>
-      </TouchableWithoutFeedback>
-    </ScrollView>
+        />
+        <ResetForm />
+        <ActionLinks navigation={navigation} />
+      </View>
+    </TouchableWithoutFeedback>
   );
 }

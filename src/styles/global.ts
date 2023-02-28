@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import color from 'theme/color';
 
 export const BasicCardStyles = StyleSheet.create({
   header: {
@@ -7,7 +8,7 @@ export const BasicCardStyles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    color: '#103B66',
+    color: color.primaryBlack,
     fontFamily: 'SourceSansPro-SemiBold',
     fontSize: 23,
     marginLeft: 20,
@@ -31,7 +32,7 @@ export const BasicCardStyles = StyleSheet.create({
     textDecorationLine: 'underline',
     fontFamily: 'SourceSansPro-Regular',
     fontSize: 18,
-    color: '#21B8F9',
+    color: color.primaryBlue,
     marginRight: 20,
   },
   linkContainer: {
@@ -43,7 +44,7 @@ export const BasicCardStyles = StyleSheet.create({
 export const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#E5E5E5',
+    backgroundColor: color.background,
     paddingHorizontal: 15,
     justifyContent: 'center',
     alignItems: 'center',
@@ -52,7 +53,7 @@ export const globalStyles = StyleSheet.create({
     fontFamily: 'SourceSansPro-SemiBold',
     marginTop: 18,
     fontSize: 24,
-    color: '#103B66',
+    color: color.primaryBlack,
     textAlign: 'center',
   },
 });

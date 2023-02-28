@@ -1,5 +1,6 @@
 import {windowWidth} from 'utils/Dimensions';
 import {StyleSheet} from 'react-native';
+import color from 'theme/color';
 
 export const headerStyles = StyleSheet.create({
   container: {
@@ -9,32 +10,33 @@ export const headerStyles = StyleSheet.create({
   textContainer: {
     marginTop: 30,
     alignItems: 'center',
-    paddingHorizontal: 42,
+    paddingHorizontal: 12,
   },
   title: {
     fontFamily: 'SourceSansPro-SemiBold',
     textAlign: 'center',
     fontSize: 33,
-    color: '#103B66',
+    color: color.primaryBlack,
   },
   subTitle: {
     fontFamily: 'SourceSansPro-Regular',
     textAlign: 'center',
-    fontSize: 19,
+    fontSize: 17,
     marginTop: 10,
   },
 });
 
 export const authWrapper = StyleSheet.create({
   container: {
-    backgroundColor: '#FFF',
+    backgroundColor: color.white,
     alignItems: 'center',
+    flex: 1,
   },
 });
 
-export const loginFormStyles = {
+export const formStyles = {
   container: {
-    width: windowWidth - 30,
+    width: windowWidth - 35,
   },
 };
 
@@ -46,34 +48,34 @@ export const textFieldStyles = StyleSheet.create({
     fontFamily: 'SourceSansPro-Regular',
     fontSize: 16,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: color.blackTransparen,
     borderRadius: 5,
     padding: 12,
-    color: '#103B66',
+    color: color.primaryBlack,
   },
   errorText: {
     fontFamily: 'SourceSansPro-Regular',
-    color: 'crimson',
+    color: color.primaryRed,
     fontSize: 14,
   },
 });
 
 export const submitButtonStyles = StyleSheet.create({
   container: {
-    backgroundColor: '#21B8F9',
+    backgroundColor: color.primaryBlue,
     borderRadius: 5,
     padding: 17,
     marginVertical: 8,
-    elevation: 6,
-    shadowOffset: {width: 0, height: 3},
-    shadowColor: '#333',
-    shadowOpacity: 0.5,
+    elevation: 4,
+    shadowOffset: {width: 0, height: 4},
+    shadowColor: color.shadow,
+    shadowOpacity: 0.3,
     shadowRadius: 4,
   },
   text: {
-    color: '#FFF',
+    color: color.white,
     textAlign: 'center',
-    fontFamily: 'SourceSansPro-Regular',
+    fontFamily: 'SourceSansPro-SemiBold',
     fontSize: 15,
   },
 });
@@ -87,7 +89,7 @@ export const deviderStyles = StyleSheet.create({
   },
   divider: {
     height: 1,
-    backgroundColor: '#6C7C8C',
+    backgroundColor: color.primaryGrey,
     flex: 1,
   },
   text: {
@@ -95,12 +97,12 @@ export const deviderStyles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 15,
     marginHorizontal: 25,
-    color: '#6C7C8C',
+    color: color.primaryGrey,
   },
 });
 export const methodsStyles = StyleSheet.create({
   container: {
-    width: windowWidth - 30,
+    width: windowWidth - 35,
   },
   buttonsContainer: {
     marginTop: 16,
@@ -108,9 +110,9 @@ export const methodsStyles = StyleSheet.create({
   buttonStyle: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#FFFFFF',
+    backgroundColor: color.white,
     borderRadius: 5,
-    borderColor: '#21B8F9',
+    borderColor: color.primaryBlue,
     borderWidth: 1,
     padding: 12,
     marginBottom: 12,
@@ -121,7 +123,7 @@ export const methodsStyles = StyleSheet.create({
     textAlign: 'right',
     fontFamily: 'SourceSansPro-SemiBold',
     fontSize: 15,
-    color: '#103B66',
+    color: color.primaryBlack,
     paddingLeft: 20,
   },
   footerTextContainer: {
@@ -131,10 +133,10 @@ export const methodsStyles = StyleSheet.create({
   text: {
     fontFamily: 'SourceSansPro-Regular',
     fontSize: 18,
-    color: '#103B66',
+    color: color.primaryBlack,
   },
   link: {
-    color: '#21B8F9',
+    color: color.primaryBlue,
   },
 });
 
@@ -144,17 +146,17 @@ export const supportButtonStyles = StyleSheet.create({
     flexDirection: 'row',
     alignSelf: 'center',
     alignItems: 'center',
-    backgroundColor: '#FFFFFF',
+    backgroundColor: color.white,
     borderRadius: 40,
-    borderColor: '#00C48C',
+    borderColor: color.primaryGreen,
     borderWidth: 1,
     paddingVertical: 10,
     paddingHorizontal: 20,
-    marginVertical: 50,
+    marginVertical: 35,
     justifyContent: 'center',
     elevation: 3,
     shadowOffset: {width: 0, height: 3},
-    shadowColor: '#333',
+    shadowColor: color.shadow,
     shadowOpacity: 0.3,
     shadowRadius: 4,
   },
@@ -162,7 +164,7 @@ export const supportButtonStyles = StyleSheet.create({
     textAlign: 'right',
     fontFamily: 'SourceSansPro-SemiBold',
     fontSize: 15,
-    color: '#103B66',
+    color: color.primaryBlack,
     paddingLeft: 12,
   },
 });

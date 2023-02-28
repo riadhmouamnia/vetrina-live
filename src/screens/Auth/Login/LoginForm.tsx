@@ -3,7 +3,7 @@ import {View, TextInput, TouchableOpacity, Text} from 'react-native';
 import {Formik, Field, FormikProps} from 'formik';
 import * as Yup from 'yup';
 import {
-  loginFormStyles,
+  formStyles,
   submitButtonStyles,
   textFieldStyles,
 } from 'screens/Auth/styles/AuthStyles';
@@ -31,7 +31,7 @@ const LoginForm: FC = () => {
 
   const renderForm = (formikProps: FormikProps<FormValues>) => {
     return (
-      <View style={loginFormStyles.container}>
+      <View style={formStyles.container}>
         <Field name="email">
           {({field, form}: any) => (
             <View style={textFieldStyles.container}>

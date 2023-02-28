@@ -1,10 +1,5 @@
 import {ReactNode} from 'react';
-import {
-  Capterra,
-  CustomurSupportIcon,
-  DomainIcon,
-  TrustpilotIcon,
-} from '../components/Icons';
+import {Capterra, DomainIcon, TrustpilotIcon} from '../components/Icons';
 export const configCard = {
   title: 'Configura la tua vetrina',
   progress: 0,

@@ -2,30 +2,29 @@ import React, {FC} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import {Headphones} from 'components/Icons';
 import {
-  SignUpMethodsStyles,
-  globalStyles,
-  LoginMethodsStyles,
-} from 'styles/global';
+  formStyles,
+  methodsStyles,
+  supportButtonStyles,
+} from 'screens/Auth/styles/AuthStyles';
 
 interface Props {
-  onReset: () => void;
+  navigation: any;
 }
 
-const ActionLinks: FC<Props> = ({onReset}) => {
+const ActionLinks: FC<Props> = ({navigation}) => {
   return (
-    <View style={LoginMethodsStyles.container}>
+    <View style={formStyles.container}>
       <TouchableOpacity
-        style={SignUpMethodsStyles.signInButton}
-        onPress={onReset}>
-        <Text style={SignUpMethodsStyles.signInText}>
+        style={methodsStyles.footerTextContainer}
+        onPress={() => navigation.navigate('Login')}>
+        <Text style={methodsStyles.text}>
           Do you have an account?{' '}
-          <Text style={SignUpMethodsStyles.signInLink}>Sign in now</Text>
+          <Text style={methodsStyles.link}>Sign in now</Text>
         </Text>
       </TouchableOpacity>
-      <TouchableOpacity
-        style={{...SignUpMethodsStyles.support, ...globalStyles.shadow}}>
+      <TouchableOpacity style={supportButtonStyles.container}>
         <Headphones />
-        <Text style={SignUpMethodsStyles.signUpText}>Support</Text>
+        <Text style={supportButtonStyles.text}>Support</Text>
       </TouchableOpacity>
     </View>
   );

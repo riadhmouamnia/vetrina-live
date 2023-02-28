@@ -3,10 +3,10 @@ import {View, TextInput, TouchableOpacity, Text} from 'react-native';
 import {Formik, Field, FormikProps} from 'formik';
 import * as Yup from 'yup';
 import {
-  CreateAccountFormStyles,
-  globalStyles,
-  LoginFormStyles,
-} from 'styles/global';
+  formStyles,
+  submitButtonStyles,
+  textFieldStyles,
+} from 'screens/Auth/styles/AuthStyles';
 
 interface FormValues {
   email: string;
@@ -29,20 +29,20 @@ const ResetForm: FC = () => {
 
   const renderForm = (formikProps: FormikProps<FormValues>) => {
     return (
-      <View style={LoginFormStyles.form}>
+      <View style={formStyles.container}>
         <Field name="email">
           {({field, form}: any) => (
-            <View style={CreateAccountFormStyles.fieldContainer}>
+            <View style={textFieldStyles.container}>
               <TextInput
                 placeholder="Email"
-                style={CreateAccountFormStyles.field}
+                style={textFieldStyles.field}
                 keyboardType="email-address"
                 onChangeText={form.handleChange('email')}
                 onBlur={form.handleBlur('email')}
                 value={field.value}
               />
               {form.touched.email && form.errors.email && (
-                <Text style={CreateAccountFormStyles.errorText}>
+                <Text style={textFieldStyles.errorText}>
                   {form.errors.email}
                 </Text>
               )}
@@ -50,9 +50,9 @@ const ResetForm: FC = () => {
           )}
         </Field>
         <TouchableOpacity
-          style={{...CreateAccountFormStyles.button, ...globalStyles.shadow}}
+          style={submitButtonStyles.container}
           onPress={formikProps.handleSubmit as any}>
-          <Text style={CreateAccountFormStyles.buttonText}>Login</Text>
+          <Text style={submitButtonStyles.text}>Login</Text>
         </TouchableOpacity>
       </View>
     );

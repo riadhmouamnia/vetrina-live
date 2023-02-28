@@ -8,16 +8,14 @@ import {
 } from 'screens/Auth/styles/AuthStyles';
 
 interface Props {
-  onFacebookSignIn: () => void;
-  onGoogleSignIn: () => void;
-  onSignIn: () => void;
+  onFacebookSignUp: () => void;
+  onGoogleSignUp: () => void;
   navigation: any;
 }
 
-const LoginMethods: FC<Props> = ({
-  onFacebookSignIn,
-  onGoogleSignIn,
-  onSignIn,
+const RegisterMethods: FC<Props> = ({
+  onFacebookSignUp,
+  onGoogleSignUp,
   navigation,
 }) => {
   return (
@@ -30,28 +28,23 @@ const LoginMethods: FC<Props> = ({
       <View style={methodsStyles.buttonsContainer}>
         <TouchableOpacity
           style={methodsStyles.buttonStyle}
-          onPress={onFacebookSignIn}>
+          onPress={onFacebookSignUp}>
           <FacebookIcon />
           <Text style={methodsStyles.buttonText}>Sign up with Facebook</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={methodsStyles.buttonStyle}
-          onPress={onGoogleSignIn}>
+          onPress={onGoogleSignUp}>
           <Googleicon />
           <Text style={methodsStyles.buttonText}>Sign up with Google</Text>
         </TouchableOpacity>
       </View>
       <TouchableOpacity
         style={methodsStyles.footerTextContainer}
-        onPress={() => navigation.navigate('Reset')}>
-        <Text style={methodsStyles.text}>Did you forget your password?</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={methodsStyles.footerTextContainer}
-        onPress={() => navigation.navigate('Register')}>
+        onPress={() => navigation.goBack()}>
         <Text style={methodsStyles.text}>
-          Do not have an account?{' '}
-          <Text style={methodsStyles.link}>Register now</Text>
+          Do you have an account?{' '}
+          <Text style={methodsStyles.link}>Sign in now</Text>
         </Text>
       </TouchableOpacity>
       <TouchableOpacity style={supportButtonStyles.container}>
@@ -62,4 +55,4 @@ const LoginMethods: FC<Props> = ({
   );
 };
 
-export default LoginMethods;
+export default RegisterMethods;

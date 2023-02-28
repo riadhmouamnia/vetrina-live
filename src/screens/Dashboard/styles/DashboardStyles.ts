@@ -1,9 +1,10 @@
 import {StyleSheet} from 'react-native';
+import color from 'theme/color';
 
 export const configCardStyles = StyleSheet.create({
   red: {
     fontFamily: 'SourceSansPro-SemiBold',
-    color: '#F33451',
+    color: color.primaryRed,
     fontSize: 21,
   },
   big: {
@@ -15,13 +16,13 @@ export const configCardStyles = StyleSheet.create({
     marginTop: 22,
     marginBottom: 8,
     fontSize: 20,
-    color: '#7D8A99',
+    color: color.primaryGrey,
   },
 });
 
 export const VisitorsCardStyles = StyleSheet.create({
   total: {
-    color: '#103B66',
+    color: color.primaryBlack,
     fontFamily: 'SourceSansPro-SemiBold',
     fontSize: 42,
     marginVertical: 18,
@@ -33,14 +34,14 @@ export const VisitorsCardStyles = StyleSheet.create({
     margin: 0,
   },
   input: {
-    color: '#6C7C8C',
+    color: color.darkGrey,
     fontSize: 13,
   },
 });
 
 export const OrdersCardStyles = StyleSheet.create({
   numbers: {
-    color: '#103B66',
+    color: color.primaryBlack,
     fontFamily: 'SourceSansPro-SemiBold',
     fontSize: 21,
     marginVertical: 4,
@@ -54,7 +55,7 @@ export const OrdersCardStyles = StyleSheet.create({
     margin: 0,
   },
   input: {
-    color: '#6C7C8C',
+    color: color.darkGrey,
     fontSize: 13,
   },
   textContainer: {
@@ -65,7 +66,7 @@ export const OrdersCardStyles = StyleSheet.create({
   text: {
     fontFamily: 'SourceSansPro-Regular',
     fontSize: 20,
-    color: '#7D8A99',
+    color: color.primaryGrey,
     flexGrow: 1,
   },
 });
@@ -75,10 +76,10 @@ export const ImageCardStyles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: '#fff',
+    backgroundColor: color.white,
     borderRadius: 8,
-    shadowColor: '#000',
-    shadowOpacity: 0.2,
+    shadowColor: color.shadow,
+    shadowOpacity: 0.4,
     shadowRadius: 2,
     shadowOffset: {width: 0, height: 4},
     elevation: 4,
@@ -107,17 +108,17 @@ export const ImageCardStyles = StyleSheet.create({
   title: {
     fontSize: 12,
     fontFamily: 'SourceSansPro-Regular',
-    color: '#21B8F9',
+    color: color.primaryBlue,
     marginBottom: 5,
   },
   body: {
     fontSize: 16,
     fontFamily: 'SourceSansPro-SemiBold',
-    color: '#103B66',
+    color: color.primaryBlack,
     marginBottom: 10,
   },
   author: {
-    color: '#7D8A99',
+    color: color.primaryGrey,
     fontSize: 11,
     fontFamily: 'SourceSansPro-Regular',
     textDecorationLine: 'underline',
@@ -130,7 +131,7 @@ export const ExtentionsCardStyles = StyleSheet.create({
     fontFamily: 'SourceSansPro-Regular',
     textAlign: 'left',
     fontSize: 18,
-    color: '#21B8F9',
+    color: color.primaryBlue,
     flexGrow: 1,
   },
   linkContainer: {
@@ -152,14 +153,14 @@ export const PositiveReviewCardStyles = StyleSheet.create({
     width: '100%',
   },
   normalText: {
-    color: '#FFf',
+    color: color.white,
     fontFamily: 'SourceSansPro-Regular',
     fontSize: 18,
     marginBottom: 15,
   },
   positive: {
     fontFamily: 'SourceSansPro-Bold',
-    color: '#00C48C',
+    color: color.primaryGreen,
   },
   bold: {
     fontFamily: 'SourceSansPro-Bold',
@@ -173,27 +174,27 @@ export const PositiveReviewCardStyles = StyleSheet.create({
     fontFamily: 'SourceSansPro-Regular',
     textDecorationLine: 'underline',
     fontSize: 17,
-    color: '#00C48C',
+    color: color.primaryGreen,
     marginRight: 13,
   },
   devider: {
     width: '100%',
     borderBottomWidth: 0.9,
-    borderBottomColor: '#FFF',
+    borderBottomColor: color.white,
     marginBottom: 30,
   },
   footer: {
     fontFamily: 'SourceSansPro-Regular',
     fontSize: 12,
     marginBottom: 2,
-    color: '#FFF',
+    color: color.white,
     alignSelf: 'flex-start',
   },
 });
 
 export const CustomerSupportCardStyles = StyleSheet.create({
   bodyText: {
-    color: '#103B66',
+    color: color.primaryBlack,
     fontFamily: 'SourceSansPro-Regular',
     fontSize: 22,
     marginLeft: 15,
@@ -207,23 +208,23 @@ export const CustomerSupportCardStyles = StyleSheet.create({
   },
 
   avatar: {
-    borderColor: '#E7E9EC',
+    borderColor: color.background,
     borderWidth: 1,
   },
   button: {
-    backgroundColor: '#21B8F9',
+    backgroundColor: color.primaryBlue,
     paddingVertical: 12,
     paddingHorizontal: 15,
     borderRadius: 5,
     marginTop: 28,
     elevation: 4,
     shadowOffset: {width: 0, height: 2},
-    shadowColor: '#333',
+    shadowColor: color.shadow,
     shadowOpacity: 0.3,
     shadowRadius: 4,
   },
   buttonText: {
-    color: '#FFf',
+    color: color.white,
     fontFamily: 'SourceSansPro-SemiBold',
     fontSize: 15,
   },
@@ -231,21 +232,21 @@ export const CustomerSupportCardStyles = StyleSheet.create({
 
 export const InviteFriendCardStyles = StyleSheet.create({
   normalText: {
-    color: '#103B66',
+    color: color.primaryBlack,
     fontFamily: 'SourceSansPro-Regular',
     fontSize: 20,
     marginBottom: 15,
   },
   positive: {
     fontFamily: 'SourceSansPro-Bold',
-    color: '#00C48C',
+    color: color.primaryGreen,
   },
   link: {
     textDecorationLine: 'underline',
     fontFamily: 'SourceSansPro-Regular',
     textAlign: 'left',
     fontSize: 18,
-    color: '#21B8F9',
+    color: color.primaryBlue,
     flexGrow: 1,
   },
   linkContainer: {
@@ -263,7 +264,7 @@ export const DashboardStyles = StyleSheet.create({
   wrapper: {
     position: 'relative',
     height: 3100,
-    backgroundColor: '#E5E5E5',
+    backgroundColor: color.background,
   },
   cardContainer: {
     position: 'absolute',
