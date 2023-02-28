@@ -4,13 +4,14 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import {LinkIcon} from 'components/Icons';
 import {dashboardCoverlink} from 'data';
 import LinearGradient from 'react-native-linear-gradient';
+import color from 'theme/color';
 
 export default function Cover() {
   return (
     <LinearGradient
       start={{x: 1, y: 0}}
       end={{x: 1, y: 1.3}}
-      colors={['#21B8F9', '#21B8F910']}
+      colors={[color.primaryBlue, color.primaryBlueOpacity]}
       style={styles.container}>
       <Text style={styles.title}>Welcome Mario!</Text>
       <TouchableOpacity style={styles.linkContainer}>
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15,
     width: '100%',
-    height: '8.3%', //8.8%
+    height: '8.1%', //8.8%
   },
   title: {
     fontFamily: 'SourceSansPro-SemiBold',

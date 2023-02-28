@@ -7,6 +7,7 @@ import {
   submitButtonStyles,
   textFieldStyles,
 } from 'screens/Auth/styles/AuthStyles';
+import color from 'theme/color';
 
 interface FormValues {
   email: string;
@@ -35,6 +36,7 @@ const ResetForm: FC = () => {
             <View style={textFieldStyles.container}>
               <TextInput
                 placeholder="Email"
+                placeholderTextColor={color.lightyGrey}
                 style={textFieldStyles.field}
                 keyboardType="email-address"
                 onChangeText={form.handleChange('email')}

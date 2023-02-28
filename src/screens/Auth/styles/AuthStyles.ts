@@ -1,35 +1,37 @@
-import {windowWidth} from 'utils/Dimensions';
+import {windowHeight, windowWidth} from 'utils/Dimensions';
 import {StyleSheet} from 'react-native';
 import color from 'theme/color';
 
 export const headerStyles = StyleSheet.create({
   container: {
-    marginVertical: 28,
+    marginVertical: 30,
     alignItems: 'center',
   },
   textContainer: {
-    marginTop: 30,
+    marginTop: 25,
     alignItems: 'center',
     paddingHorizontal: 12,
   },
   title: {
     fontFamily: 'SourceSansPro-SemiBold',
     textAlign: 'center',
-    fontSize: 33,
+    fontSize: 30,
     color: color.primaryBlack,
   },
   subTitle: {
     fontFamily: 'SourceSansPro-Regular',
     textAlign: 'center',
     fontSize: 17,
-    marginTop: 10,
+    marginTop: 8,
+    color: color.secondaryBlack,
   },
 });
 
 export const authWrapper = StyleSheet.create({
   container: {
-    backgroundColor: color.white,
+    backgroundColor: color.background,
     alignItems: 'center',
+    justifyContent: 'flex-start',
     flex: 1,
   },
 });
@@ -42,7 +44,7 @@ export const formStyles = {
 
 export const textFieldStyles = StyleSheet.create({
   container: {
-    marginBottom: 18,
+    marginBottom: 16,
   },
   field: {
     fontFamily: 'SourceSansPro-Regular',
@@ -50,7 +52,7 @@ export const textFieldStyles = StyleSheet.create({
     borderWidth: 1,
     borderColor: color.blackTransparen,
     borderRadius: 5,
-    padding: 12,
+    padding: 10,
     color: color.primaryBlack,
   },
   errorText: {
@@ -64,7 +66,7 @@ export const submitButtonStyles = StyleSheet.create({
   container: {
     backgroundColor: color.primaryBlue,
     borderRadius: 5,
-    padding: 17,
+    padding: 16,
     marginVertical: 8,
     elevation: 4,
     shadowOffset: {width: 0, height: 4},
@@ -84,12 +86,12 @@ export const deviderStyles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 18,
+    marginTop: 12,
     marginBottom: 8,
   },
   divider: {
     height: 1,
-    backgroundColor: color.primaryGrey,
+    backgroundColor: color.darkGrey,
     flex: 1,
   },
   text: {
@@ -97,7 +99,7 @@ export const deviderStyles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 15,
     marginHorizontal: 25,
-    color: color.primaryGrey,
+    color: color.darkGrey,
   },
 });
 export const methodsStyles = StyleSheet.create({
@@ -152,7 +154,7 @@ export const supportButtonStyles = StyleSheet.create({
     borderWidth: 1,
     paddingVertical: 10,
     paddingHorizontal: 20,
-    marginVertical: 35,
+    marginVertical: 45,
     justifyContent: 'center',
     elevation: 3,
     shadowOffset: {width: 0, height: 3},

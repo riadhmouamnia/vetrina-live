@@ -1,5 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import color from 'theme/color';
 
 export default function SliderCard({data}: any) {
   return (
@@ -7,7 +8,7 @@ export default function SliderCard({data}: any) {
       <View
         style={{
           ...styles.card,
-          backgroundColor: data.color ? data.color : '#EEE',
+          backgroundColor: data.color ? data.color : color.lightyGrey,
         }}>
         <View style={styles.content}>
           {data.icon ? data.icon : null}
@@ -25,6 +26,7 @@ export default function SliderCard({data}: any) {
 const styles = StyleSheet.create({
   container: {
     margin: 8,
+    marginVertical: 20,
   },
   card: {
     justifyContent: 'center',
@@ -39,17 +41,17 @@ const styles = StyleSheet.create({
     fontFamily: 'SourceSansPro-SemiBold',
     textAlign: 'center',
     fontSize: 40,
-    color: '#FFF',
+    color: color.white,
   },
   subtitle: {
     fontFamily: 'SourceSansPro-SemiBold',
     fontSize: 25,
-    color: '#FFF',
+    color: color.white,
     textAlign: 'center',
   },
   link: {
     marginTop: 10,
-    color: '#103B66',
+    color: color.primaryBlack,
     fontFamily: 'SourceSansPro-Regular',
     fontSize: 15,
     marginBottom: 18,

@@ -7,6 +7,7 @@ import {
   submitButtonStyles,
   textFieldStyles,
 } from 'screens/Auth/styles/AuthStyles';
+import color from 'theme/color';
 
 interface FormValues {
   name: string;
@@ -40,6 +41,7 @@ const RegisterForm: FC = () => {
             <View style={textFieldStyles.container}>
               <TextInput
                 placeholder="Name and Surname"
+                placeholderTextColor={color.lightyGrey}
                 style={textFieldStyles.field}
                 onChangeText={form.handleChange('name')}
                 onBlur={form.handleBlur('name')}
@@ -58,6 +60,7 @@ const RegisterForm: FC = () => {
             <View style={textFieldStyles.container}>
               <TextInput
                 placeholder="Email"
+                placeholderTextColor={color.lightyGrey}
                 style={textFieldStyles.field}
                 keyboardType="email-address"
                 onChangeText={form.handleChange('email')}
@@ -77,6 +80,7 @@ const RegisterForm: FC = () => {
             <View style={textFieldStyles.container}>
               <TextInput
                 placeholder="Password"
+                placeholderTextColor={color.lightyGrey}
                 style={textFieldStyles.field}
                 secureTextEntry={true}
                 onChangeText={form.handleChange('password')}

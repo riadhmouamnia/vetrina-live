@@ -103,7 +103,7 @@ export const ImageCardStyles = StyleSheet.create({
     flex: 8,
     height: '100%',
     justifyContent: 'space-evenly',
-    padding: 15,
+    padding: 17,
   },
   title: {
     fontSize: 12,
@@ -112,7 +112,7 @@ export const ImageCardStyles = StyleSheet.create({
     marginBottom: 5,
   },
   body: {
-    fontSize: 16,
+    fontSize: 14.5,
     fontFamily: 'SourceSansPro-SemiBold',
     color: color.primaryBlack,
     marginBottom: 10,
@@ -139,6 +139,9 @@ export const ExtentionsCardStyles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  cardsContainer: {
+    marginVertical: 10,
+  },
 });
 
 export const PositiveReviewCardStyles = StyleSheet.create({
@@ -156,7 +159,7 @@ export const PositiveReviewCardStyles = StyleSheet.create({
     color: color.white,
     fontFamily: 'SourceSansPro-Regular',
     fontSize: 18,
-    marginBottom: 15,
+    marginBottom: 14,
   },
   positive: {
     fontFamily: 'SourceSansPro-Bold',
@@ -167,7 +170,7 @@ export const PositiveReviewCardStyles = StyleSheet.create({
   },
   linkContainer: {
     flexDirection: 'row',
-    marginTop: 12,
+    marginTop: 10,
     marginBottom: 4,
   },
   link: {

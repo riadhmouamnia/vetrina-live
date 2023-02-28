@@ -2,6 +2,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {FilterIcon, MenuIcon, SearchIcon} from './Icons';
+import color from 'theme/color';
 
 export default function CustomHeader({icons, title, navigation}: any) {
   return (
@@ -33,8 +34,8 @@ const styles = StyleSheet.create({
     paddingTop: 28,
     paddingBottom: 15,
     paddingHorizontal: 18,
-    backgroundColor: '#fff',
-    borderBottomColor: '#0A254032',
+    backgroundColor: color.white,
+    borderBottomColor: color.blackTransparen,
     borderBottomWidth: 1,
     alignItems: 'center',
     justifyContent: 'flex-start',
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     fontFamily: 'SourceSansPro-SemiBold',
     marginLeft: 18,
     fontSize: 21,
-    color: '#103B66',
+    color: color.primaryBlack,
   },
   Left: {
     flexDirection: 'row',

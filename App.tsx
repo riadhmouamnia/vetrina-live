@@ -7,8 +7,8 @@ import RootDrawerNavigator from 'routes/RootDrawerNavigator';
 function App() {
   return (
     <NavigationContainer>
-      <AuthStack />
-      {/* <RootDrawerNavigator /> */}
+      {/* <AuthStack /> */}
+      <RootDrawerNavigator />
     </NavigationContainer>
   );
 }
