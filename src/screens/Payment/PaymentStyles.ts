@@ -14,9 +14,11 @@ export const PaymentStyles = StyleSheet.create({
   },
   titleContainer: {
     marginVertical: 12,
+    backgroundColor: 'red',
   },
   title: {
     fontFamily: 'SourceSansPro-SemiBold',
+    textAlign: 'center',
     color: color.primaryBlack,
     fontSize: 22,
     marginTop: 35,

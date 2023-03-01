@@ -116,3 +116,37 @@ export const inviteFriend = {
   title: 'Invite a friend!',
   link: 'Start inviting friends!',
 };
+
+export const plansData = [
+  {
+    id: 1,
+    title: 'Free',
+    productsNum: 'Max 150 prodotti',
+    yearly: 0,
+    monthly: 0,
+  },
+  {
+    id: 2,
+    title: 'Vetrina',
+    productsNum: 'Max 150 prodotti',
+    yearly: 109,
+    monthly: 10.99,
+    promo: '2 mesi in regalo',
+  },
+  {
+    id: 3,
+    title: 'Negozio',
+    productsNum: 'Max 150 prodotti',
+    yearly: 209,
+    monthly: 22.99,
+    promo: '2 mesi in regalo',
+  },
+  {
+    id: 4,
+    title: 'Vetrina',
+    productsNum: 'Max 150 prodotti',
+    yearly: 399,
+    monthly: 34.99,
+    promo: '2 mesi in regalo',
+  },
+];
