@@ -8,6 +8,7 @@ const primaryBlack = '#103B66';
 const secondaryBlack = '#546679';
 const primaryGrey = '#546679';
 const lightyGrey = '#B6BEC6';
+const diasbledGrey = '#E7E9EC';
 const darkGrey = '#6C7C8C';
 const shadow = '#222';
 const primaryGreen = '#00C48C';
@@ -24,6 +25,7 @@ const color = {
   primaryRed,
   primaryBlack,
   secondaryBlack,
+  diasbledGrey,
   primaryGrey,
   lightyGrey,
   darkGrey,

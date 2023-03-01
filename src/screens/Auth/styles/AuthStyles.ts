@@ -1,4 +1,4 @@
-import {windowHeight, windowWidth} from 'utils/Dimensions';
+import {windowWidth} from 'utils/Dimensions';
 import {StyleSheet} from 'react-native';
 import color from 'theme/color';
 
