@@ -6,11 +6,13 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
 } from 'components/Icons';
+import ProductsTable from 'screens/Products/ProductsTable';
+import {products} from 'data';
 
 export default function TableCard() {
   return (
     <View style={tableCardStyles.container}>
-      <Text>TableCard</Text>
+      <ProductsTable products={products} />
       <View style={tableCardStyles.footer}>
         <View style={tableCardStyles.flexRow}>
           <Text style={tableCardStyles.text}>p</Text>

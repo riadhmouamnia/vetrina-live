@@ -150,3 +150,48 @@ export const plansData = [
     promo: '2 mesi in regalo',
   },
 ];
+
+export const products = [
+  {
+    id: 1,
+    name: 'T-shirt',
+    price: 10.99,
+    image: '../src/assets/images/t-shirt.png',
+  },
+  {
+    id: 2,
+    name: 'T-shirt',
+    price: 10.99,
+    image: '../src/assets/images/t-shirt.png',
+  },
+  {
+    id: 3,
+    name: 'T-shirt',
+    price: 10.99,
+    image: '../src/assets/images/t-shirt.png',
+  },
+  {
+    id: 4,
+    name: 'T-shirt',
+    price: 10.99,
+    image: '../src/assets/images/t-shirt.png',
+  },
+  {
+    id: 5,
+    name: 'T-shirt',
+    price: 10.99,
+    image: '../src/assets/images/t-shirt.png',
+  },
+  {
+    id: 6,
+    name: 'T-shirt',
+    price: 10.99,
+    image: '../src/assets/images/t-shirt.png',
+  },
+  {
+    id: 7,
+    name: 'T-shirt',
+    price: 10.99,
+    image: '../src/assets/images/t-shirt.png',
+  },
+];

@@ -15,7 +15,7 @@ export default function Products({navigation}: any) {
   const [isSwitchOn, setIsSwitchOn] = useState(false);
   return (
     <View style={ProductsStyles.wrapper}>
-      <CustomHeader title="Producst" navigation={navigation} icons />
+      <CustomHeader title="Products" navigation={navigation} icons />
       <ScrollView>
         <View style={ProductsStyles.container}>
           <View style={ProductsStyles.header}>
