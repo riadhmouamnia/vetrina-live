@@ -38,7 +38,7 @@ export default function Subscription({navigation}: any) {
               }>
               Monthly
             </Text>
-            <View style={SubscriptionStyles.switch}>
+            <View style={SubscriptionStyles.switchOn}>
               <Switch
                 value={plan === 'Yearly'}
                 trackColor={{false: 'transparent', true: 'transparent'}}

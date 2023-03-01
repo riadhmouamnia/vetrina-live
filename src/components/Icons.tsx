@@ -111,7 +111,6 @@ export const FileIcon = () => {
   `;
   return <SvgXml xml={xml} />;
 };
-
 export const ExternalLinkIcon = () => {
   const xml = `<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M18.5 13V19C18.5 19.5304 18.2893 20.0391 17.9142 20.4142C17.5391 20.7893 17.0304 21 16.5 21H5.5C4.96957 21 4.46086 20.7893 4.08579 20.4142C3.71071 20.0391 3.5 19.5304 3.5 19V8C3.5 7.46957 3.71071 6.96086 4.08579 6.58579C4.46086 6.21071 4.96957 6 5.5 6H11.5" stroke="#21B8F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -353,6 +352,35 @@ export const PaystackIcon = () => {
   </clipPath>
   </defs>
   </svg>
+  `;
+  return <SvgXml xml={xml} />;
+};
+export const PlusIcon = () => {
+  const xml = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 5V19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M5 12H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>  
+  `;
+  return <SvgXml xml={xml} />;
+};
+export const ChevronDownIcon = () => {
+  const xml = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52858 5.52851C3.78892 5.26816 4.21103 5.26816 4.47138 5.52851L7.99998 9.05711L11.5286 5.52851C11.7889 5.26816 12.211 5.26816 12.4714 5.52851C12.7317 5.78886 12.7317 6.21097 12.4714 6.47132L8.47138 10.4713C8.21103 10.7317 7.78892 10.7317 7.52858 10.4713L3.52858 6.47132C3.26823 6.21097 3.26823 5.78886 3.52858 5.52851Z" fill="#6C7C8C"/>
+  </svg>
+  `;
+  return <SvgXml xml={xml} />;
+};
+export const ChevronLeftIcon = () => {
+  const xml = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4714 3.52851C10.7318 3.78886 10.7318 4.21097 10.4714 4.47132L6.94283 7.99992L10.4714 11.5285C10.7318 11.7889 10.7318 12.211 10.4714 12.4713C10.2111 12.7317 9.78896 12.7317 9.52862 12.4713L5.52862 8.47132C5.26827 8.21097 5.26827 7.78886 5.52862 7.52851L9.52862 3.52851C9.78897 3.26816 10.2111 3.26816 10.4714 3.52851Z" fill="#6C7C8C"/>
+  </svg>  
+  `;
+  return <SvgXml xml={xml} />;
+};
+export const ChevronRightIcon = () => {
+  const xml = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.52858 12.4715C5.26823 12.2111 5.26823 11.789 5.52858 11.5287L9.05717 8.00008L5.52857 4.47149C5.26823 4.21114 5.26823 3.78903 5.52857 3.52868C5.78892 3.26833 6.21103 3.26833 6.47138 3.52868L10.4714 7.52868C10.7317 7.78903 10.7317 8.21114 10.4714 8.47149L6.47138 12.4715C6.21103 12.7318 5.78892 12.7318 5.52858 12.4715Z" fill="#6C7C8C"/>
+  </svg>  
   `;
   return <SvgXml xml={xml} />;
 };

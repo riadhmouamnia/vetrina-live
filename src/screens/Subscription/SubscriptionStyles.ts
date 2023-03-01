@@ -38,10 +38,15 @@ export const SubscriptionStyles = StyleSheet.create({
     fontFamily: 'SourceSansPro-SemiBold',
     fontSize: 17,
   },
-  switch: {
+  switchOn: {
     marginHorizontal: 20,
     borderRadius: 16,
     backgroundColor: color.primaryBlue,
+  },
+  switchOff: {
+    marginHorizontal: 20,
+    borderRadius: 16,
+    backgroundColor: color.primaryGrey,
   },
   promoBadge: {
     backgroundColor: color.primaryGreen,
