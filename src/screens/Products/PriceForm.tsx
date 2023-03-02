@@ -1,13 +1,17 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import CardContainer from 'components/CardContainer';
-import {InfoCardStyles} from 'screens/Products/AddProductStyles';
+import {
+  checkboxStyles,
+  InfoCardStyles,
+} from 'screens/Products/AddProductStyles';
 import CustomTextInput from 'screens/Products/CustomTextInput';
 import {CurrencyDisabledIcon, CurrencyIcon} from 'components/Icons';
-import {RadioButton} from 'react-native-paper';
-import {Checkbox} from 'react-native-paper';
-export default function PriceCard() {
+import {CheckBox} from '@rneui/themed';
+
+export default function PriceForm() {
   const [checked, setChecked] = React.useState(false);
+  const toggleCheckbox = () => setChecked(!checked);
   return (
     <CardContainer>
       <View style={InfoCardStyles.header}>
@@ -23,17 +27,23 @@ export default function PriceCard() {
         <View style={InfoCardStyles.body}>
           <Text style={InfoCardStyles.subTitle}>Discounted price</Text>
           <CustomTextInput
-            startIcon={<CurrencyDisabledIcon />}
-            disabled
+            startIcon={!checked ? <CurrencyDisabledIcon /> : <CurrencyIcon />}
+            disabled={!checked}
             placeholder="Price"
           />
         </View>
         <View>
-          <Checkbox
-            status={checked ? 'checked' : 'unchecked'}
-            onPress={() => {
-              setChecked(!checked);
-            }}
+          <CheckBox
+            checked={checked}
+            onPress={toggleCheckbox}
+            iconType="material-community"
+            checkedIcon="checkbox-outline"
+            uncheckedIcon={'checkbox-blank-outline'}
+            title="Activate discounted price"
+            size={30}
+            containerStyle={checkboxStyles.containerStyle}
+            textStyle={checkboxStyles.textStyle}
+            right={true}
           />
         </View>
       </View>

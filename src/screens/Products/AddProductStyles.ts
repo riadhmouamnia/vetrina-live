@@ -69,6 +69,12 @@ export const InfoCardStyles = StyleSheet.create({
     fontSize: 15,
     color: color.secondaryBlack,
   },
+  subTitleContainer: {
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
   body: {
     alignItems: 'flex-start',
     width: '100%',
@@ -120,6 +126,10 @@ export const InfoCardStyles = StyleSheet.create({
     borderBottomColor: color.lightyGrey,
     borderBottomWidth: 1,
   },
+  radioButtonsContainer: {
+    flexDirection: 'row',
+    width: '100%',
+  },
 });
 
 export const CustomTextInputStyles = StyleSheet.create({
@@ -131,7 +141,7 @@ export const CustomTextInputStyles = StyleSheet.create({
     borderWidth: 1,
     borderColor: color.lightyGrey,
     alignItems: 'center',
-    justifyContent: 'center',
+    // justifyContent: 'center',
     height: 45,
     marginTop: 10,
   },
@@ -140,12 +150,11 @@ export const CustomTextInputStyles = StyleSheet.create({
     fontFamily: 'SourceSansPro-Regular',
     paddingHorizontal: 4,
     alignItems: 'center',
-    width: '80%',
+    width: '85%',
   },
   Icon: {
-    paddingHorizontal: 8,
+    paddingHorizontal: 4,
   },
-
   disabled: {
     width: '100%',
     paddingHorizontal: 10,
@@ -158,5 +167,21 @@ export const CustomTextInputStyles = StyleSheet.create({
     justifyContent: 'center',
     height: 45,
     marginTop: 10,
+  },
+});
+
+export const checkboxStyles = StyleSheet.create({
+  containerStyle: {
+    margin: 0,
+    padding: 0,
+    marginHorizontal: 0,
+    marginLeft: 0,
+    width: '100%',
+  },
+  textStyle: {
+    color: color.primaryBlack,
+    fontFamily: 'SourceSansPro-Regular',
+    fontWeight: '400',
+    fontSize: 17,
   },
 });

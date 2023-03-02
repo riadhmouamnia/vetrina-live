@@ -6,7 +6,7 @@ import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import {BackIcon} from 'components/Icons';
 import {AddProductStyles} from 'screens/Products/AddProductStyles';
 import {Tab} from '@rneui/themed';
-import Info from 'screens/Products/Info';
+import InfoTab from 'screens/Products/InfoTab';
 
 export default function AddProduct({navigation}: any) {
   const [index, setIndex] = useState(0);
@@ -47,7 +47,7 @@ export default function AddProduct({navigation}: any) {
                 }
               />
             </Tab>
-            {index === 0 && <Info />}
+            {index === 0 && <InfoTab />}
             {index === 1 && (
               <Text style={AddProductStyles.title}>variants</Text>
             )}
