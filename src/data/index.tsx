@@ -195,3 +195,14 @@ export const products = [
     image: '../src/assets/images/t-shirt.png',
   },
 ];
+
+export const Orders = [
+  {
+    id: 1,
+    code: 2134,
+    firstName: 'Cameron',
+    lastName: 'Williamson',
+    stato: 'Shipped',
+  },
+  {id: 2, code: 2135, firstName: 'Bruce', lastName: 'Wayne', stato: 'New'},
+];

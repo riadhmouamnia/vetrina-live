@@ -480,7 +480,6 @@ export const UnderLineIcon = () => {
     />
   );
 };
-
 export const CurrencyIcon = () => {
   const xml = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M9.99996 1.66675C5.40517 1.66675 1.66663 5.40529 1.66663 10.0001C1.66663 14.5949 5.40517 18.3334 9.99996 18.3334C14.5948 18.3334 18.3333 14.5949 18.3333 10.0001C18.3333 5.40529 14.5948 1.66675 9.99996 1.66675ZM9.99996 17.2917C5.97913 17.2917 2.70829 14.0209 2.70829 10.0001C2.70829 5.97925 5.97913 2.70841 9.99996 2.70841C14.0208 2.70841 17.2916 5.97925 17.2916 10.0001C17.2916 14.0209 14.0208 17.2917 9.99996 17.2917Z" fill="#103B66"/>
@@ -533,6 +532,29 @@ export const AvailabilityIcon = () => {
   <path d="M17.5 13.3334V6.66675C17.4997 6.37448 17.4225 6.08742 17.2763 5.83438C17.13 5.58134 16.9198 5.37122 16.6667 5.22508L10.8333 1.89175C10.58 1.74547 10.2926 1.66846 10 1.66846C9.70744 1.66846 9.42003 1.74547 9.16667 1.89175L3.33333 5.22508C3.08022 5.37122 2.86998 5.58134 2.72372 5.83438C2.57745 6.08742 2.5003 6.37448 2.5 6.66675V13.3334C2.5003 13.6257 2.57745 13.9127 2.72372 14.1658C2.86998 14.4188 3.08022 14.6289 3.33333 14.7751L9.16667 18.1084C9.42003 18.2547 9.70744 18.3317 10 18.3317C10.2926 18.3317 10.58 18.2547 10.8333 18.1084L16.6667 14.7751C16.9198 14.6289 17.13 14.4188 17.2763 14.1658C17.4225 13.9127 17.4997 13.6257 17.5 13.3334Z" stroke="#103B66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M2.72498 5.7998L9.99998 10.0081L17.275 5.7998" stroke="#103B66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M10 18.4V10" stroke="#103B66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>  
+  `;
+  return <SvgXml xml={xml} />;
+};
+export const ExternalLinkDisabledIcon = () => {
+  const xml = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11" stroke="#B6BEC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15 3H21V9" stroke="#B6BEC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10 14L21 3" stroke="#B6BEC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  `;
+  return <SvgXml xml={xml} />;
+};
+export const ChevronTableUpIcon = () => {
+  const xml = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5876 4.8376C6.81541 4.6098 7.18475 4.6098 7.41256 4.8376L10.9126 8.3376C11.1404 8.56541 11.1404 8.93475 10.9126 9.16256C10.6848 9.39037 10.3154 9.39037 10.0876 9.16256L7.00008 6.07504L3.91256 9.16256C3.68475 9.39037 3.31541 9.39037 3.0876 9.16256C2.8598 8.93475 2.8598 8.56541 3.0876 8.3376L6.5876 4.8376Z" fill="#103B66"/>
+  </svg>  
+  `;
+  return <SvgXml xml={xml} />;
+};
+export const ChevronTableDownIcon = () => {
+  const xml = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.0876 4.8376C3.31541 4.6098 3.68475 4.6098 3.91256 4.8376L7.00008 7.92512L10.0876 4.8376C10.3154 4.6098 10.6848 4.6098 10.9126 4.8376C11.1404 5.06541 11.1404 5.43475 10.9126 5.66256L7.41256 9.16256C7.18475 9.39037 6.81541 9.39037 6.5876 9.16256L3.0876 5.66256C2.8598 5.43475 2.8598 5.06541 3.0876 4.8376Z" fill="#103B66"/>
   </svg>  
   `;
   return <SvgXml xml={xml} />;

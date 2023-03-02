@@ -1,6 +1,6 @@
 import {MoroHorizontalIcon} from 'components/Icons';
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {View} from 'react-native';
 import {DataTable, Avatar} from 'react-native-paper';
 import {TableStyles} from 'screens/Products/ProductsStyles';
 
