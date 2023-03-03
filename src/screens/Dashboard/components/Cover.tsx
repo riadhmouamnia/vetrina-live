@@ -31,13 +31,13 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'SourceSansPro-SemiBold',
-    color: '#FFF',
+    color: color.white,
     fontSize: 35,
     marginVertical: 15,
   },
   link: {
     fontFamily: 'SourceSansPro-Regular',
-    color: '#FFF',
+    color: color.white,
     fontSize: 17,
     marginRight: 10,
   },
