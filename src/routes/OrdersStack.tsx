@@ -1,6 +1,6 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Orders from 'screens/Orders';
-import OrdersDetails from 'screens/Orders/OrdersDetails';
+import OrderDetails from 'screens/Orders/OrderDetails';
 
 const Stack = createNativeStackNavigator();
 
@@ -13,7 +13,7 @@ export default function ProductsStack() {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        component={OrdersDetails}
+        component={OrderDetails}
         name="Order details"
         options={{headerShown: false}}
       />

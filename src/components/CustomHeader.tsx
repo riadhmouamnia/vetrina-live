@@ -1,9 +1,10 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
-import { TouchableOpacity } from "react-native-gesture-handler";
-import { FilterIcon, MenuIcon, SearchIcon } from "./Icons";
+import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import {TouchableOpacity} from 'react-native-gesture-handler';
+import {FilterIcon, MenuIcon, SearchIcon} from './Icons';
+import color from 'theme/color';
 
-export default function CustomHeader({ icons, title, navigation }: any) {
+export default function CustomHeader({icons, title, navigation}: any) {
   return (
     <View style={styles.header}>
       <View style={styles.Left}>
@@ -28,32 +29,32 @@ export default function CustomHeader({ icons, title, navigation }: any) {
 
 const styles = StyleSheet.create({
   header: {
-    flexDirection: "row",
-    width: "100%",
+    flexDirection: 'row',
+    width: '100%',
     paddingTop: 28,
     paddingBottom: 15,
     paddingHorizontal: 18,
-    backgroundColor: "#fff",
-    borderBottomColor: "#0A254032",
+    backgroundColor: color.white,
+    borderBottomColor: color.blackTransparen,
     borderBottomWidth: 1,
-    alignItems: "center",
-    justifyContent: "flex-start",
+    alignItems: 'center',
+    justifyContent: 'flex-start',
   },
   headerText: {
-    fontFamily: "SourceSansPro-SemiBold",
-    marginLeft: 10,
-    fontSize: 18,
-    color: "#103B66",
+    fontFamily: 'SourceSansPro-SemiBold',
+    marginLeft: 18,
+    fontSize: 21,
+    color: color.primaryBlack,
   },
   Left: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   Right: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "flex-end",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
     flexGrow: 1,
   },
   Filter: {

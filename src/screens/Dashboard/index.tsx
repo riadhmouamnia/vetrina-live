@@ -1,15 +1,38 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {View} from 'react-native';
 import React from 'react';
+import {ScrollView} from 'react-native-gesture-handler';
+import Cover from 'screens/Dashboard/components/Cover';
+import ConfigCard from 'screens/Dashboard/components/ConfigCard';
+import VisitorsCard from 'screens/Dashboard/components/VisitorsCard';
+import OrdersCard from 'screens/Dashboard/components/OrdersCard';
+import LatestNewsCard from 'screens/Dashboard/components/LatestNewsCard';
+import ExtensionsCard from 'screens/Dashboard/components/ExtensionsCard';
+import PositiveReviewCard from 'screens/Dashboard/components/PositiveReviewCard';
+import CustomHeader from 'components/CustomHeader';
+import CustomerSupportCard from 'screens/Dashboard/components/CustomerSupportCard';
+import InviteFriendCard from 'screens/Dashboard/components/InviteFriendCard';
+import {DashboardStyles} from 'screens/Dashboard/styles/DashboardStyles';
 
-export default function Dashboard() {
+const Dashboard = ({navigation}: any) => {
   return (
     <View>
-      <Text>Dashboard</Text>
-      <Text style={{fontFamily: 'SourceSansPro-Bold', fontSize: 30}}>
-        Custom Font
-      </Text>
+      <CustomHeader title="Dashboard" navigation={navigation} />
+      <ScrollView>
+        <View style={DashboardStyles.wrapper}>
+          <Cover />
+          <View style={DashboardStyles.cardContainer}>
+            <ConfigCard />
+            <VisitorsCard />
+            <OrdersCard />
+            <LatestNewsCard />
+            <ExtensionsCard />
+            <PositiveReviewCard />
+            <CustomerSupportCard />
+            <InviteFriendCard />
+          </View>
+        </View>
+      </ScrollView>
     </View>
   );
-}
-
-const styles = StyleSheet.create({});
+};
+export default Dashboard;
