@@ -6,6 +6,7 @@ import {
 import React from 'react';
 import {View, Text} from 'react-native';
 import {DataTable} from 'react-native-paper';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 import {
   OrderTableStyles,
   TableChexBoxStyles,
@@ -21,11 +22,30 @@ interface Orders {
 }
 
 interface OrdersTableProps {
-  Orders: Orders[];
+  ordersData: Orders[];
+  navigation: any;
 }
 
+const getButtonStyle = (permesso: string) => {
+  switch (permesso) {
+    case 'Shipped':
+      return OrderTableStyles.shipped;
+    case 'New':
+      return OrderTableStyles.new;
+    case 'Reso effettuato':
+      return OrderTableStyles.reso;
+    case 'Cancelled':
+      return OrderTableStyles.cancelled;
+    case 'In progress':
+      return OrderTableStyles.progress;
+    default:
+      return {};
+  }
+};
+
 const OrdersTable: React.FC<OrdersTableProps> = ({
-  Orders,
+  ordersData,
+  navigation,
 }: OrdersTableProps) => {
   const [checked, setChecked] = React.useState(false);
   const toggleCheckbox = () => setChecked(!checked);
@@ -73,7 +93,7 @@ const OrdersTable: React.FC<OrdersTableProps> = ({
         </DataTable.Title>
       </DataTable.Header>
 
-      {Orders.map(Order => (
+      {ordersData.map(Order => (
         <DataTable.Row key={Order.id} style={OrderTableStyles.row}>
           <DataTable.Cell style={OrderTableStyles.firstColumn}>
             <DataTable.Cell>
@@ -91,17 +111,21 @@ const OrdersTable: React.FC<OrdersTableProps> = ({
               </View>
             </DataTable.Cell>
           </DataTable.Cell>
-          <DataTable.Cell numeric style={OrderTableStyles.secondColumn}>
+          <DataTable.Cell style={OrderTableStyles.secondColumn}>
             <View>
               <Text style={OrderTableStyles.bodyText}>{Order.firstName}</Text>
               <Text style={OrderTableStyles.bodyText}>{Order.lastName}</Text>
             </View>
           </DataTable.Cell>
           <DataTable.Cell numeric style={OrderTableStyles.thirdColumn}>
-            {Order.stato}
+            <TouchableOpacity
+              style={getButtonStyle(Order.stato)}
+              onPress={() => navigation.navigate('Order details')}>
+              <Text style={OrderTableStyles.textButton}>{Order.stato}</Text>
+            </TouchableOpacity>
           </DataTable.Cell>
           <DataTable.Cell numeric style={OrderTableStyles.FourthColumn}>
-            <MoroHorizontalIcon />
+            <MoroHorizontalIcon width={17} />
           </DataTable.Cell>
         </DataTable.Row>
       ))}

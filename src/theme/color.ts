@@ -15,12 +15,13 @@ const primaryGreen = '#00C48C';
 const secondaryGreen = '#E0FFF6';
 const orange = '#FFA26B';
 const blueTint = '#6979F8';
-
+const purple = '#BE52F2';
 const color = {
   primaryBlue,
   primaryBlueOpacity,
   blackTransparen,
   background,
+  purple,
   white,
   primaryRed,
   primaryBlack,

@@ -1,6 +1,6 @@
 import {MoroHorizontalIcon} from 'components/Icons';
 import React from 'react';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 import {DataTable, Avatar} from 'react-native-paper';
 import {TableStyles} from 'screens/Products/ProductsStyles';
 
@@ -20,16 +20,15 @@ const ProductTable: React.FC<ProductTableProps> = ({products}) => {
     <DataTable>
       <DataTable.Header>
         <DataTable.Title style={TableStyles.firstColumn}>
-          Product name
+          <Text style={TableStyles.title}>Product name</Text>
         </DataTable.Title>
         <DataTable.Title numeric style={TableStyles.middleColumn}>
-          Price
+          <Text style={TableStyles.title}>Price</Text>
         </DataTable.Title>
         <DataTable.Title numeric style={TableStyles.lastColumn}>
           <MoroHorizontalIcon />
         </DataTable.Title>
       </DataTable.Header>
-
       {products.map(product => (
         <DataTable.Row key={product.id} style={TableStyles.row}>
           <DataTable.Cell style={TableStyles.firstColumn}>
@@ -39,11 +38,13 @@ const ProductTable: React.FC<ProductTableProps> = ({products}) => {
                 source={require('../../assets/images/t-shirt.png')}
                 style={TableStyles.avatar}
               />
-              <DataTable.Cell>{product.name}</DataTable.Cell>
+              <DataTable.Cell>
+                <Text style={TableStyles.text}>{product.name}</Text>
+              </DataTable.Cell>
             </View>
           </DataTable.Cell>
           <DataTable.Cell numeric style={TableStyles.middleColumn}>
-            €{product.price.toFixed(2)}
+            <Text style={TableStyles.text}>€{product.price.toFixed(2)}</Text>
           </DataTable.Cell>
           <DataTable.Cell numeric style={TableStyles.lastColumn}>
             <MoroHorizontalIcon />

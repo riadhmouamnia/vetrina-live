@@ -119,4 +119,14 @@ export const TableStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text: {
+    fontSize: 15,
+    color: color.primaryBlack,
+    fontFamily: 'SourceSansPro-Regular',
+  },
+  title: {
+    fontSize: 17,
+    color: color.primaryBlack,
+    fontFamily: 'SourceSansPro-SemiBold',
+  },
 });

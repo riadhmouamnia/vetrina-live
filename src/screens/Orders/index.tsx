@@ -5,6 +5,7 @@ import {OrderStyles} from 'screens/Orders/OrdersStyles';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import {ExternalLinkDisabledIcon} from 'components/Icons';
 import OrderTableContainer from 'screens/Orders/OrderTableContainer';
+import {ordersData} from 'data';
 
 export default function Orders({navigation}: any) {
   return (
@@ -13,13 +14,15 @@ export default function Orders({navigation}: any) {
       <ScrollView>
         <View style={OrderStyles.container}>
           <View style={OrderStyles.header}>
-            <Text style={OrderStyles.headerText}>Orders: 24</Text>
+            <Text style={OrderStyles.headerText}>
+              Orders: {ordersData.length}
+            </Text>
             <TouchableOpacity style={OrderStyles.button}>
               <Text style={OrderStyles.buttonText}>Ship order</Text>
               <ExternalLinkDisabledIcon />
             </TouchableOpacity>
           </View>
-          <OrderTableContainer />
+          <OrderTableContainer navigation={navigation} />
         </View>
       </ScrollView>
     </View>

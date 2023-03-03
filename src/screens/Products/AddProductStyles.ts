@@ -141,7 +141,6 @@ export const CustomTextInputStyles = StyleSheet.create({
     borderWidth: 1,
     borderColor: color.lightyGrey,
     alignItems: 'center',
-    // justifyContent: 'center',
     height: 45,
     marginTop: 10,
   },

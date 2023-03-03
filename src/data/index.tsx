@@ -196,7 +196,7 @@ export const products = [
   },
 ];
 
-export const Orders = [
+export const ordersData = [
   {
     id: 1,
     code: 2134,
@@ -205,4 +205,30 @@ export const Orders = [
     stato: 'Shipped',
   },
   {id: 2, code: 2135, firstName: 'Bruce', lastName: 'Wayne', stato: 'New'},
+  {
+    id: 3,
+    code: 2136,
+    firstName: 'Michele',
+    lastName: 'Cimmino',
+    stato: 'Reso effettuato',
+  },
+  {id: 4, code: 2135, firstName: 'Bruce', lastName: 'Wayne', stato: 'New'},
+  {
+    id: 5,
+    code: 2137,
+    firstName: 'Dwayen',
+    lastName: 'Wade',
+    stato: 'Cancelled',
+  },
+  {id: 6, code: 2138, firstName: 'John', lastName: 'Doe', stato: 'New'},
+  {id: 7, code: 2139, firstName: 'Emily', lastName: 'Johnson', stato: 'New'},
+  {
+    id: 8,
+    code: 2140,
+    firstName: 'William',
+    lastName: 'Brown',
+    stato: 'In progress',
+  },
+  {id: 9, code: 2141, firstName: 'John', lastName: 'Doe', stato: 'In progress'},
+  {id: 10, code: 2142, firstName: 'Carl', lastName: 'Galeger', stato: 'New'},
 ];

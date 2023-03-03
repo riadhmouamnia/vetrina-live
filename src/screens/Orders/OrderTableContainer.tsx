@@ -5,14 +5,14 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
 } from 'components/Icons';
-import {Orders} from 'data';
+import {ordersData} from 'data';
 import OrdersTable from 'screens/Orders/OrdersTable';
 import {OrderTableContainerStyles} from 'screens/Orders/OrdersStyles';
 
-export default function OrderTableContainer() {
+export default function OrderTableContainer({navigation}: any) {
   return (
     <View style={OrderTableContainerStyles.container}>
-      <OrdersTable Orders={Orders} />
+      <OrdersTable ordersData={ordersData} navigation={navigation} />
       <View style={OrderTableContainerStyles.footer}>
         <View style={OrderTableContainerStyles.flexRow}>
           <Text style={OrderTableContainerStyles.text}>p</Text>
