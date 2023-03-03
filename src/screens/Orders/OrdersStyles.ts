@@ -194,3 +194,60 @@ export const OrderTableContainerStyles = StyleSheet.create({
     marginLeft: 35,
   },
 });
+
+export const orderDetailsStyles = StyleSheet.create({
+  wrapper: {
+    flex: 1,
+    backgroundColor: color.white,
+    paddingHorizontal: 20,
+  },
+  header: {
+    flexDirection: 'row',
+    paddingVertical: 30,
+    justifyContent: 'space-between',
+    borderBottomColor: color.diasbledGrey,
+    borderBottomWidth: 1,
+  },
+  title: {
+    fontFamily: 'SourceSansPro-Regular',
+    color: color.primaryBlack,
+    fontSize: 17,
+  },
+  link: {
+    fontFamily: 'SourceSansPro-Regular',
+    color: color.primaryBlue,
+    fontSize: 15,
+    marginRight: 25,
+    marginLeft: 10,
+  },
+  linkContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+});
+
+export const tabsStyles = StyleSheet.create({
+  title: {
+    fontFamily: 'SourceSansPro-SemiBold',
+    color: color.secondaryBlack,
+    fontSize: 17,
+  },
+  subtitle: {
+    fontFamily: 'SourceSansPro-Regular',
+    color: color.primaryBlack,
+    fontSize: 16,
+  },
+  body: {
+    fontFamily: 'SourceSansPro-Regular',
+    color: color.primaryBlack,
+    fontSize: 15,
+  },
+  link: {
+    color: color.primaryBlue,
+  },
+  bold: {
+    fontFamily: 'SourceSansPro-SemiBold',
+    color: color.primaryBlack,
+    fontSize: 17,
+  },
+});

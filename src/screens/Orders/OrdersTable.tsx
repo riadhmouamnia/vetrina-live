@@ -120,7 +120,7 @@ const OrdersTable: React.FC<OrdersTableProps> = ({
           <DataTable.Cell numeric style={OrderTableStyles.thirdColumn}>
             <TouchableOpacity
               style={getButtonStyle(Order.stato)}
-              onPress={() => navigation.navigate('Order details')}>
+              onPress={() => navigation.navigate('Order info')}>
               <Text style={OrderTableStyles.textButton}>{Order.stato}</Text>
             </TouchableOpacity>
           </DataTable.Cell>
