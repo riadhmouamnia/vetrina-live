@@ -1,4 +1,3 @@
-import {StyleSheet, Text, View, TextInput} from 'react-native';
 import React from 'react';
 import GeneralInformationForm from 'screens/Products/GeneralInformationForm';
 import PriceForm from 'screens/Products/PriceForm';
@@ -15,5 +14,3 @@ export default function InfoTab() {
     </>
   );
 }
-
-const styles = StyleSheet.create({});

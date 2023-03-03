@@ -13,6 +13,7 @@ import {
   WeightIcon,
 } from 'components/Icons';
 import {CheckBox} from '@rneui/themed';
+import color from 'theme/color';
 
 export default function DetailsForm() {
   const [checked, setChecked] = React.useState(false);
@@ -23,9 +24,9 @@ export default function DetailsForm() {
         <Text style={InfoCardStyles.title}>Details</Text>
       </View>
       <View style={InfoCardStyles.body}>
-        <Text style={InfoCardStyles.subTitle}>Original Price</Text>
+        <Text style={InfoCardStyles.subTitle}>Category</Text>
         <CustomTextInput
-          endIcon={<DetailsChevronDown />}
+          endIcon={<DetailsChevronDown fill={color.primaryBlack} />}
           placeholder="Select category"
         />
       </View>

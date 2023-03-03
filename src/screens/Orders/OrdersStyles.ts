@@ -226,11 +226,26 @@ export const orderDetailsStyles = StyleSheet.create({
   },
 });
 
-export const tabsStyles = StyleSheet.create({
+export const infoOrdersTabsStyles = StyleSheet.create({
+  header: {
+    marginVertical: 20,
+  },
   title: {
     fontFamily: 'SourceSansPro-SemiBold',
     color: color.secondaryBlack,
-    fontSize: 17,
+    fontSize: 19,
+    marginBottom: 15,
+  },
+  devider: {
+    borderBottomColor: color.diasbledGrey,
+    borderBottomWidth: 1,
+    marginTop: 4,
+    marginBottom: 20,
+  },
+  date: {
+    fontFamily: 'SourceSansPro-Regular',
+    color: color.secondaryBlack,
+    fontSize: 15,
   },
   subtitle: {
     fontFamily: 'SourceSansPro-Regular',
@@ -241,13 +256,125 @@ export const tabsStyles = StyleSheet.create({
     fontFamily: 'SourceSansPro-Regular',
     color: color.primaryBlack,
     fontSize: 15,
+    marginBottom: 10,
+  },
+  contact: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 10,
+  },
+  whatsApp: {
+    fontFamily: 'SourceSansPro-Regular',
+    color: color.primaryGreen,
+    fontSize: 15,
+    marginLeft: 10,
+  },
+  telegram: {
+    fontFamily: 'SourceSansPro-Regular',
+    color: color.primaryBlue,
+    fontSize: 15,
+    marginLeft: 10,
   },
   link: {
     color: color.primaryBlue,
+    fontFamily: 'SourceSansPro-Regular',
+    fontSize: 15,
+    marginBottom: 10,
   },
   bold: {
     fontFamily: 'SourceSansPro-SemiBold',
     color: color.primaryBlack,
     fontSize: 17,
+  },
+  shippingDropDown: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  shippingText: {
+    fontFamily: 'SourceSansPro-Regular',
+    color: color.primaryBlack,
+    fontSize: 15,
+    marginHorizontal: 10,
+  },
+  description: {
+    fontFamily: 'SourceSansPro-Regular',
+    color: color.primaryGrey,
+    fontSize: 12,
+    marginTop: 10,
+  },
+  footer: {
+    marginTop: 80,
+    marginBottom: 40,
+  },
+  checkout: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 18,
+  },
+  checkouttext: {
+    fontFamily: 'SourceSansPro-Regular',
+    color: color.primaryBlack,
+    fontSize: 17,
+    marginBottom: 10,
+  },
+  courierShipping: {
+    flexDirection: 'row',
+  },
+  total: {
+    fontFamily: 'SourceSansPro-SemiBold',
+    color: color.primaryBlack,
+    fontSize: 17,
+    marginBottom: 10,
+  },
+});
+
+export const tabsStyle = StyleSheet.create({
+  button: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: color.blueTint,
+    padding: 28,
+    width: '100%',
+    borderRadius: 8,
+    elevation: 4,
+    shadowOffset: {width: 0, height: 5},
+    shadowColor: color.shadow,
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+  },
+  buttonText: {
+    fontFamily: 'SourceSansPro-Regular',
+    fontSize: 18,
+    color: color.white,
+  },
+  title: {
+    fontFamily: 'SourceSansPro-SemiBold',
+    marginTop: 20,
+    fontSize: 28,
+    color: color.primaryBlack,
+  },
+  tab: {
+    marginTop: 15,
+    marginBottom: 4,
+  },
+  devider: {
+    borderBottomColor: color.diasbledGrey,
+    borderBottomWidth: 1,
+  },
+  tabItem: {
+    fontFamily: 'SourceSansPro-SemiBold',
+    fontSize: 12,
+    color: color.primaryBlack,
+  },
+  tabItemActive: {
+    fontFamily: 'SourceSansPro-SemiBold',
+    fontSize: 12,
+    color: color.primaryBlue,
+  },
+  indicatorStyle: {
+    backgroundColor: color.primaryBlue,
+    height: 3,
   },
 });
