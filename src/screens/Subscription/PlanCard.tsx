@@ -1,7 +1,6 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {CardStyles} from 'screens/Subscription/SubscriptionStyles';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 
 interface Props {
   title: string;
@@ -20,7 +19,7 @@ export default function PlanCard({title, productsNum, promo, price}: Props) {
       <View style={CardStyles.footer}>
         <View>
           {promo ? <Text style={CardStyles.promoText}>{promo}</Text> : null}
-          <Text style={CardStyles.price}>
+          <Text style={CardStyles.price} testID="price">
             €<Text style={CardStyles.activePrice}> {price.toFixed(2)} </Text>
             /year
           </Text>
@@ -32,5 +31,3 @@ export default function PlanCard({title, productsNum, promo, price}: Props) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({});
