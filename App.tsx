@@ -1,15 +1,13 @@
-import {NavigationContainer} from '@react-navigation/native';
+import AuthProvider from 'context/AuthContext';
 import React from 'react';
-import {StyleSheet} from 'react-native';
-import AuthStack from 'routes/AuthStack';
-import RootDrawerNavigator from 'routes/RootDrawerNavigator';
+
+import RootNavigation from 'routes/RootNavigation';
 
 function App() {
   return (
-    <NavigationContainer>
-      {/* <AuthStack /> */}
-      <RootDrawerNavigator />
-    </NavigationContainer>
+    <AuthProvider>
+      <RootNavigation />
+    </AuthProvider>
   );
 }
 

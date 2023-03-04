@@ -1,5 +1,5 @@
-import React, {FC} from 'react';
-import {View, TextInput, TouchableOpacity, Text} from 'react-native';
+import React, {FC, useContext} from 'react';
+import {View, TextInput, TouchableOpacity, Text, Alert} from 'react-native';
 import {Formik, Field, FormikProps} from 'formik';
 import * as Yup from 'yup';
 import {
@@ -8,6 +8,7 @@ import {
   textFieldStyles,
 } from 'screens/Auth/styles/AuthStyles';
 import color from 'theme/color';
+import {AuthContext} from 'context/AuthContext';
 
 interface FormValues {
   email: string;
@@ -25,9 +26,13 @@ const validationSchema = Yup.object().shape({
 });
 
 const LoginForm: FC = () => {
-  const handleSubmit = (values: FormValues) => {
-    console.log(values);
-    // Submit form logic here
+  const {login} = useContext<any>(AuthContext);
+
+  const handleSubmit = async ({email, password}: FormValues) => {
+    if (email !== '' && password !== '') {
+      login(email, password);
+      console.log('Logged in successfully: ', email);
+    }
   };
 
   const renderForm = (formikProps: FormikProps<FormValues>) => {
@@ -74,7 +79,7 @@ const LoginForm: FC = () => {
           )}
         </Field>
         <TouchableOpacity
-          onPress={formikProps.handleSubmit as any}
+          onPress={formikProps.handleSubmit}
           style={submitButtonStyles.container}>
           <Text style={submitButtonStyles.text}>Login</Text>
         </TouchableOpacity>
