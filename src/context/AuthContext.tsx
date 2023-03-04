@@ -11,9 +11,8 @@ const AuthProvider = ({children}: any) => {
   const login = async (email: string, password: string) => {
     try {
       await auth().signInWithEmailAndPassword(email, password);
-    } catch (error) {
-      console.log(error);
-      return error;
+    } catch ({message}) {
+      Alert.alert('Error', message as string);
     }
   };
   const googleLogin = async () => {
@@ -28,8 +27,8 @@ const AuthProvider = ({children}: any) => {
 
       // Sign-in the user with the credential
       await auth().signInWithCredential(googleCredential);
-    } catch (error) {
-      console.log(error);
+    } catch ({message}) {
+      Alert.alert('Error', message as string);
     }
   };
   const register = async (email: string, password: string, name: string) => {
@@ -41,8 +40,8 @@ const AuthProvider = ({children}: any) => {
       user.updateProfile({
         displayName: name,
       });
-    } catch (error) {
-      console.log(error);
+    } catch ({message}) {
+      Alert.alert('Error', message as string);
     }
   };
   const logout = async () => {
@@ -55,8 +54,12 @@ const AuthProvider = ({children}: any) => {
   const reset = async (email: string) => {
     try {
       await auth().sendPasswordResetEmail(email);
-    } catch (error) {
-      console.log(error);
+      Alert.alert(
+        'Email Sent',
+        'check your email we sent you a password reset link.',
+      );
+    } catch ({message}) {
+      Alert.alert('Error', message as string);
     }
   };
   return (

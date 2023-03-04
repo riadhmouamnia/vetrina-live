@@ -31,6 +31,7 @@ const LoginForm: FC = () => {
   const handleSubmit = async ({email, password}: FormValues) => {
     if (email !== '' && password !== '') {
       login(email, password);
+      console.log('Logged in successfully: ', email);
     }
   };
 

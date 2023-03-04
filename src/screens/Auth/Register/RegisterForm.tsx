@@ -33,8 +33,8 @@ const RegisterForm: FC = () => {
   const handleSubmit = async ({email, password, name}: FormValues) => {
     if (name !== '' && email !== '' && password !== '') {
       register(email, password, name);
+      console.log('Registration successfully as :', email);
     }
-    console.log('user from Signup: ');
   };
 
   const renderForm = (formikProps: FormikProps<FormValues>) => {
