@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "338633047574",
+    "project_id": "vetrina-live-b44ae",
+    "storage_bucket": "vetrina-live-b44ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338633047574:android:dd20ca5935296831d03f37",
+        "android_client_info": {
+          "package_name": "com.vetrina_live"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338633047574-r0tjl2rh0i512f4ujgk26gi41br5creu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vetrina_live",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "338633047574-fpfvvohtr842fk9g56c4785vr2vcvhpg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgL_NI_9V-BPX43O31UBqTQmEGPXE-uc0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338633047574-fpfvvohtr842fk9g56c4785vr2vcvhpg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,7 @@
-import React, {FC} from 'react';
+import React, {FC, useContext} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import {FacebookIcon, Googleicon, Headphones} from 'components/Icons';
+import {AuthContext} from 'context/AuthContext';
 import {
   deviderStyles,
   methodsStyles,
@@ -8,18 +9,11 @@ import {
 } from 'screens/Auth/styles/AuthStyles';
 
 interface Props {
-  onFacebookSignIn: () => void;
-  onGoogleSignIn: () => void;
-  onSignIn: () => void;
   navigation: any;
 }
 
-const LoginMethods: FC<Props> = ({
-  onFacebookSignIn,
-  onGoogleSignIn,
-  onSignIn,
-  navigation,
-}) => {
+const LoginMethods: FC<Props> = ({navigation}) => {
+  const {googleLogin} = useContext<any>(AuthContext);
   return (
     <View style={methodsStyles.container}>
       <View style={deviderStyles.container}>
@@ -28,17 +22,15 @@ const LoginMethods: FC<Props> = ({
         <View style={deviderStyles.divider} />
       </View>
       <View style={methodsStyles.buttonsContainer}>
-        <TouchableOpacity
-          style={methodsStyles.buttonStyle}
-          onPress={onFacebookSignIn}>
+        <TouchableOpacity style={methodsStyles.buttonStyle}>
           <FacebookIcon />
-          <Text style={methodsStyles.buttonText}>Sign up with Facebook</Text>
+          <Text style={methodsStyles.buttonText}>Sign in with Facebook</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={methodsStyles.buttonStyle}
-          onPress={onGoogleSignIn}>
+          onPress={() => googleLogin()}>
           <Googleicon />
-          <Text style={methodsStyles.buttonText}>Sign up with Google</Text>
+          <Text style={methodsStyles.buttonText}>Sign in with Google</Text>
         </TouchableOpacity>
       </View>
       <TouchableOpacity

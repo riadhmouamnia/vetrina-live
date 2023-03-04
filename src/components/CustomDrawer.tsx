@@ -1,17 +1,19 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 import {
   DrawerContentScrollView,
   DrawerItemList,
 } from '@react-navigation/drawer';
-
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import LinearGradient from 'react-native-linear-gradient';
 import color from 'theme/color';
 import {Icon} from 'react-native-elements';
+import {AuthContext} from 'context/AuthContext';
+
+// {user.photoURL}
+// {user.displayName}
 
 export default function CustomDrawer(props: any) {
+  const {logout, user} = useContext<any>(AuthContext);
   return (
     <View style={{flex: 1}}>
       <LinearGradient
@@ -20,10 +22,14 @@ export default function CustomDrawer(props: any) {
         colors={[color.primaryBlue, color.primaryBlueOpacity]}
         style={styles.container}>
         <Image
-          source={require('../assets/images/avatar1.png')}
+          source={
+            user.photoURL
+              ? {uri: user.photoURL}
+              : require('../assets/images/avatar1.png')
+          }
           style={styles.avatar}
         />
-        <Text style={styles.userName}>John Doe</Text>
+        <Text style={styles.userName}>{user.displayName ?? 'Terra Luna'}</Text>
         <View style={styles.balanceContainer}>
           <Text style={styles.balance}>280 Coins</Text>
           <Icon
@@ -40,7 +46,7 @@ export default function CustomDrawer(props: any) {
         </View>
       </DrawerContentScrollView>
       <View style={styles.footer}>
-        <TouchableOpacity onPress={() => {}} style={styles.signOutButton}>
+        <TouchableOpacity onPress={() => logout()} style={styles.signOutButton}>
           <View style={styles.signOut}>
             <Icon
               name="log-out-outline"
