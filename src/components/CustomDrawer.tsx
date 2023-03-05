@@ -9,9 +9,6 @@ import color from 'theme/color';
 import {Icon} from 'react-native-elements';
 import {AuthContext} from 'context/AuthContext';
 
-// {user.photoURL}
-// {user.displayName}
-
 export default function CustomDrawer(props: any) {
   const {logout, user} = useContext<any>(AuthContext);
   return (

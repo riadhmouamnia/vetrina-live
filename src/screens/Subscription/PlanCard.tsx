@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {CardStyles} from 'screens/Subscription/SubscriptionStyles';
 

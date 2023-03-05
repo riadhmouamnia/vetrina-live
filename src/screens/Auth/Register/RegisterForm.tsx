@@ -1,5 +1,5 @@
 import React, {FC, useContext} from 'react';
-import {View, TextInput, TouchableOpacity, Text, Alert} from 'react-native';
+import {View, TextInput, TouchableOpacity, Text} from 'react-native';
 import {Formik, Field, FormikProps} from 'formik';
 import * as Yup from 'yup';
 import {

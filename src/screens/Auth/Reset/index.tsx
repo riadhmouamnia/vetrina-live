@@ -1,9 +1,4 @@
-import {
-  Keyboard,
-  ScrollView,
-  TouchableWithoutFeedback,
-  View,
-} from 'react-native';
+import {Keyboard, TouchableWithoutFeedback, View} from 'react-native';
 import React from 'react';
 import Header from 'screens/Auth/shared/Header';
 import ResetForm from 'screens/Auth/Reset/ResetForm';

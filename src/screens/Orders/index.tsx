@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Button} from 'react-native';
+import {Text, View} from 'react-native';
 import React from 'react';
 import CustomHeader from 'components/CustomHeader';
 import {OrderStyles} from 'screens/Orders/OrdersStyles';
@@ -28,5 +28,3 @@ export default function Orders({navigation}: any) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({});

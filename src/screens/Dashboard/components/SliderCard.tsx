@@ -1,24 +1,36 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import color from 'theme/color';
+import {lightyGrey, white, primaryBlack} from 'theme/color';
 
-export default function SliderCard({data}: any) {
+type CardData = {
+  link: string;
+  icon?: any;
+  title?: string;
+  subTitle?: string;
+  color?: string;
+};
+
+export default function SliderCard({
+  link,
+  icon,
+  title,
+  subTitle,
+  color,
+}: CardData) {
   return (
     <View style={styles.container}>
       <View
         style={{
           ...styles.card,
-          backgroundColor: data.color ? data.color : color.lightyGrey,
+          backgroundColor: color ? color : lightyGrey,
         }}>
         <View style={styles.content}>
-          {data.icon ? data.icon : null}
-          {data.title ? <Text style={styles.title}>{data.title}</Text> : null}
-          {data.subTitle ? (
-            <Text style={styles.subtitle}>{data.subTitle}</Text>
-          ) : null}
+          {icon ? icon : null}
+          {title ? <Text style={styles.title}>{title}</Text> : null}
+          {subTitle ? <Text style={styles.subtitle}>{subTitle}</Text> : null}
         </View>
       </View>
-      <Text style={styles.link}>{data.link}</Text>
+      <Text style={styles.link}>{link}</Text>
     </View>
   );
 }
@@ -41,17 +53,17 @@ const styles = StyleSheet.create({
     fontFamily: 'SourceSansPro-SemiBold',
     textAlign: 'center',
     fontSize: 40,
-    color: color.white,
+    color: white,
   },
   subtitle: {
     fontFamily: 'SourceSansPro-SemiBold',
     fontSize: 25,
-    color: color.white,
+    color: white,
     textAlign: 'center',
   },
   link: {
     marginTop: 10,
-    color: color.primaryBlack,
+    color: primaryBlack,
     fontFamily: 'SourceSansPro-Regular',
     fontSize: 15,
     marginBottom: 18,

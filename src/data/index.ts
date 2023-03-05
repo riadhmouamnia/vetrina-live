@@ -1,5 +1,3 @@
-import {ReactNode} from 'react';
-import {Capterra, DomainIcon, TrustpilotIcon} from '../components/Icons';
 export const configCard = {
   title: 'Configura la tua vetrina',
   progress: 0,
@@ -69,39 +67,7 @@ export const latestNews = {
   ],
 };
 
-export interface CardData {
-  key: number;
-  link: string;
-  icon?: any;
-  title?: string;
-  subTitle?: string;
-  color?: string;
-}
-
-export interface ExtensionsData {
-  title: string;
-  link: string;
-  cards: CardData[];
-}
-
-export const extentions: ExtensionsData = {
-  title: 'Extensions Marketplace',
-  link: 'Discover all extensions',
-  cards: [
-    {key: 1, link: 'Custom Domain', icon: <DomainIcon />, color: '#FFA26B'},
-    {
-      key: 2,
-      link: '+ 50 Products',
-      title: '+50',
-      subTitle: 'Prodotti',
-      color: '#00C48C',
-    },
-  ],
-};
-
 export const positiveReviews = {
-  topIcon: <Capterra />,
-  bottomIcon: <TrustpilotIcon />,
   topLink: 'Write a review on Capterra',
   bottomLink: 'Write a review on Trustpilot',
   footer: '* The two promotions are cumulative',
