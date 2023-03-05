@@ -24,7 +24,7 @@ const Dashboard = ({navigation}: any) => {
             <ConfigCard />
             <VisitorsCard />
             <OrdersCard />
-            <LatestNewsCard />
+            <LatestNewsCard navigation={navigation} />
             <ExtensionsCard />
             <PositiveReviewCard />
             <CustomerSupportCard />

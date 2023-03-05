@@ -5,21 +5,33 @@ import {ImageCardStyles} from 'screens/Dashboard/styles/DashboardStyles';
 
 type Props = {
   title: string;
-  body: string;
+  subTitle: string;
+  body: object;
   author: string;
   image: any;
+  navigation: any;
 };
 
-export default function CardImg({title, body, image, author}: Props) {
+export default function CardImg({
+  title,
+  subTitle,
+  body,
+  image,
+  author,
+  navigation,
+}: Props) {
+  const handlePress = () => {
+    navigation.navigate('Latest news', {title, body, author, image, subTitle});
+  };
   return (
-    <TouchableOpacity style={ImageCardStyles.card}>
+    <TouchableOpacity style={ImageCardStyles.card} onPress={handlePress}>
       <View style={ImageCardStyles.imageContainer}>
         <Image source={image} style={ImageCardStyles.image} />
       </View>
       <View style={ImageCardStyles.contentContainer}>
         <Text style={ImageCardStyles.title}>{title}</Text>
         <Text numberOfLines={2} style={ImageCardStyles.body}>
-          {body}
+          {subTitle}
         </Text>
         <Text style={ImageCardStyles.author}>{author}</Text>
       </View>
