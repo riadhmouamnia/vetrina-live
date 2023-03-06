@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import React, {useState} from 'react';
 import CustomHeader from 'components/CustomHeader';
 import {ProductsStyles} from 'screens/Products/ProductsStyles';
@@ -57,5 +57,3 @@ export default function AddProduct({navigation}: any) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({});

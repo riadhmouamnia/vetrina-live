@@ -1,4 +1,4 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import CardContainer from 'components/CardContainer';
 import {InfoCardStyles} from 'screens/Products/AddProductStyles';
@@ -67,5 +67,3 @@ export default function GeneralInformationForm() {
     </CardContainer>
   );
 }
-
-const styles = StyleSheet.create({});

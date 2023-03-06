@@ -7,8 +7,6 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import CustomDrawer from 'components/CustomDrawer';
 import {Icon} from 'react-native-elements';
 import color from 'theme/color';
-import {useContext} from 'react';
-import {AuthContext} from 'context/AuthContext';
 
 const Drawer = createDrawerNavigator();
 

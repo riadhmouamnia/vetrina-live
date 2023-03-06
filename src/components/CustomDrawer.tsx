@@ -8,14 +8,13 @@ import LinearGradient from 'react-native-linear-gradient';
 import color from 'theme/color';
 import {Icon} from 'react-native-elements';
 import {AuthContext} from 'context/AuthContext';
-
-// {user.photoURL}
-// {user.displayName}
+import Spinner from 'react-native-loading-spinner-overlay/lib';
 
 export default function CustomDrawer(props: any) {
-  const {logout, user} = useContext<any>(AuthContext);
+  const {logout, user, isLoading} = useContext<any>(AuthContext);
   return (
     <View style={{flex: 1}}>
+      <Spinner visible={isLoading} />
       <LinearGradient
         start={{x: 0, y: 0.8}}
         end={{x: 1.2, y: 0.1}}

@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import React from 'react';
 import {infoOrdersTabsStyles, tabsStyle} from 'screens/Orders/OrdersStyles';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -90,5 +90,3 @@ export default function InfoOrders() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({});

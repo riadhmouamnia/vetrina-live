@@ -1,15 +1,13 @@
-import {Text, View} from 'react-native';
+import {Text, View, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import {CardStyles} from 'screens/Payment/PaymentStyles';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 
 interface Props {
-  id: number;
   name: string;
   icon: JSX.Element;
 }
 
-export default function PaymentsCard({id, name, icon}: Props) {
+export default function PaymentsCard({name, icon}: Props) {
   const [disabled, setIsDisabled] = useState(true);
   return (
     <View style={CardStyles.container}>
@@ -17,6 +15,7 @@ export default function PaymentsCard({id, name, icon}: Props) {
         {icon}
         <TouchableOpacity
           onPress={() => setIsDisabled(!disabled)}
+          testID="PaymentCard"
           style={
             disabled ? CardStyles.buttornDisabled : CardStyles.buttornEnabled
           }>

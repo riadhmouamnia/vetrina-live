@@ -40,6 +40,7 @@ export default function Subscription({navigation}: any) {
             </Text>
             <View style={SubscriptionStyles.switchOn}>
               <Switch
+                testID="changePlan"
                 value={plan === 'Yearly'}
                 trackColor={{false: 'transparent', true: 'transparent'}}
                 onValueChange={togglePlan}

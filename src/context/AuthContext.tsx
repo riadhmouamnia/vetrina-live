@@ -7,15 +7,20 @@ export const AuthContext = createContext({});
 
 const AuthProvider = ({children}: any) => {
   const [user, setUser] = useState<FirebaseAuthTypes.User | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const login = async (email: string, password: string) => {
+    setIsLoading(true);
     try {
       await auth().signInWithEmailAndPassword(email, password);
+      setIsLoading(false);
     } catch ({message}) {
       Alert.alert('Error', message as string);
+      setIsLoading(false);
     }
   };
   const googleLogin = async () => {
+    setIsLoading(true);
     try {
       // Check if your device supports Google Play
       await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
@@ -27,11 +32,14 @@ const AuthProvider = ({children}: any) => {
 
       // Sign-in the user with the credential
       await auth().signInWithCredential(googleCredential);
+      setIsLoading(false);
     } catch ({message}) {
       Alert.alert('Error', message as string);
+      setIsLoading(false);
     }
   };
   const register = async (email: string, password: string, name: string) => {
+    setIsLoading(true);
     try {
       const {user} = await auth().createUserWithEmailAndPassword(
         email,
@@ -40,18 +48,24 @@ const AuthProvider = ({children}: any) => {
       user.updateProfile({
         displayName: name,
       });
+      setIsLoading(false);
     } catch ({message}) {
       Alert.alert('Error', message as string);
+      setIsLoading(false);
     }
   };
   const logout = async () => {
+    setIsLoading(true);
     try {
       await auth().signOut();
+      setIsLoading(false);
     } catch (error) {
       console.log(error);
+      setIsLoading(false);
     }
   };
   const reset = async (email: string) => {
+    setIsLoading(true);
     try {
       await auth().sendPasswordResetEmail(email);
       Alert.alert(
@@ -60,6 +74,7 @@ const AuthProvider = ({children}: any) => {
       );
     } catch ({message}) {
       Alert.alert('Error', message as string);
+      setIsLoading(false);
     }
   };
   return (
@@ -68,6 +83,8 @@ const AuthProvider = ({children}: any) => {
         user,
         setUser,
         login,
+        isLoading,
+        setIsLoading,
         logout,
         register,
         reset,

@@ -1,4 +1,4 @@
-import {StyleSheet, TextInput, View} from 'react-native';
+import {TextInput, View} from 'react-native';
 import React from 'react';
 import color from 'theme/color';
 import {CustomTextInputStyles} from 'screens/Products/AddProductStyles';
@@ -39,5 +39,3 @@ export default function CustomTextInput({
     </View>
   );
 }
-
-const styles = StyleSheet.create({});

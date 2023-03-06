@@ -1,5 +1,5 @@
-import {Text, View} from 'react-native';
-import React, {useContext} from 'react';
+import {View} from 'react-native';
+import React from 'react';
 import {ScrollView} from 'react-native-gesture-handler';
 import Cover from 'screens/Dashboard/components/Cover';
 import ConfigCard from 'screens/Dashboard/components/ConfigCard';
@@ -24,7 +24,7 @@ const Dashboard = ({navigation}: any) => {
             <ConfigCard />
             <VisitorsCard />
             <OrdersCard />
-            <LatestNewsCard />
+            <LatestNewsCard navigation={navigation} />
             <ExtensionsCard />
             <PositiveReviewCard />
             <CustomerSupportCard />

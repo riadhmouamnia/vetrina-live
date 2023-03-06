@@ -1,15 +1,16 @@
 import {Text, View} from 'react-native';
 import React from 'react';
 import CardContainer from 'components/CardContainer';
-import {ArrowRightSmall} from 'components/Icons';
+import {ArrowRightSmall, Capterra, TrustpilotIcon} from 'components/Icons';
 import {positiveReviews} from 'data';
 import {PositiveReviewCardStyles} from 'screens/Dashboard/styles/DashboardStyles';
+import color from 'theme/color';
 
 export default function PositiveReviewCard() {
   return (
-    <CardContainer color="#103B66">
+    <CardContainer color={color.primaryBlack}>
       <View style={PositiveReviewCardStyles.header}>
-        {positiveReviews.topIcon}
+        <Capterra />
       </View>
       <View style={PositiveReviewCardStyles.content}>
         <Text style={PositiveReviewCardStyles.normalText}>
@@ -30,7 +31,7 @@ export default function PositiveReviewCard() {
       </View>
       <View style={PositiveReviewCardStyles.devider} />
       <View style={PositiveReviewCardStyles.header}>
-        {positiveReviews.bottomIcon}
+        <TrustpilotIcon />
       </View>
       <View style={PositiveReviewCardStyles.content}>
         <Text style={PositiveReviewCardStyles.normalText}>

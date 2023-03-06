@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import React from 'react';
 import CardContainer from 'components/CardContainer';
 import {
@@ -65,5 +65,3 @@ export default function DetailsForm() {
     </CardContainer>
   );
 }
-
-const styles = StyleSheet.create({});

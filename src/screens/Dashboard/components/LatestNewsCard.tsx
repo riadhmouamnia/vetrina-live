@@ -7,7 +7,7 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import CardImg from 'screens/Dashboard/components/CardImg';
 import {BasicCardStyles} from 'styles/global';
 
-export default function LatestNewsCard() {
+export default function LatestNewsCard({navigation}: any) {
   return (
     <CardContainer>
       <View style={BasicCardStyles.header}>
@@ -17,14 +17,8 @@ export default function LatestNewsCard() {
         </View>
       </View>
       <View style={BasicCardStyles.body}>
-        {latestNews.eCommerceTips.map(tip => (
-          <CardImg
-            key={tip.key}
-            title={tip.title}
-            body={tip.body}
-            author={tip.author}
-            image={tip.image}
-          />
+        {latestNews.eCommerceTips.map((tip, index) => (
+          <CardImg {...tip} navigation={navigation} />
         ))}
       </View>
       <TouchableOpacity style={BasicCardStyles.linkContainer}>
