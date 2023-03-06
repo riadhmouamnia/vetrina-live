@@ -1,8 +1,8 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {AuthContext} from 'context/AuthContext';
 import React, {useContext, useEffect, useState} from 'react';
-import AuthStack from 'routes/AuthStack';
-import RootDrawerNavigator from 'routes/RootDrawerNavigator';
+import AuthStack from 'navigations/AuthStack';
+import RootDrawerNavigator from 'navigations/RootDrawerNavigator';
 import auth, {FirebaseAuthTypes} from '@react-native-firebase/auth';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 
